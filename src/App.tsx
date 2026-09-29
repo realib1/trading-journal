@@ -56,8 +56,8 @@ const App = () => {
     [trades],
   );
 
-  const win_rate = trades.length === 0 ? 0 : (win / trades.length) * 100;
-  const loss_rate = trades.length === 0 ? 0 : (loss / trades.length) * 100;
+  const win_rate = trades.length === 0 ? 0 : +((win / trades.length) * 100).toFixed(2);
+  const loss_rate = trades.length === 0 ? 0 : +((loss / trades.length) * 100).toFixed(2);
 
   return (
     <>
